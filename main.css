@@ -1,0 +1,42 @@
+nav{
+    
+    position: sticky;
+    top: 0;
+    z-index: 1071;
+    box-shadow: 0 1px 20px 0 rgb(137, 93, 62);
+}
+.navbar{
+    background-color: rgb(227, 236, 241);
+    border-radius: 0px;
+    display: flex;
+    margin: 1px;
+    padding: 10px;
+    height:4em;
+   
+
+}
+
+.item{
+        background-color: azure;
+}
+
+.mid{
+        text-align: center;
+        height:100000px;
+}
+
+#item-1 img{
+    height:50px;
+    width:70px;
+}
+
+#item-2{
+        font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight : 400;
+        font-: red; 
+        
+}
+#item-3{
+    background-color: red;
+    
+}
