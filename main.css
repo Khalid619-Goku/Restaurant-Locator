@@ -36,7 +36,10 @@ nav{
         font-: red; 
         
 }
-#item-3{
-    background-color: red;
+#item-3 button{
+    border-radius: 10px;
+    background-color: rgb(15, 15, 15);
+    color: rgb(236, 230, 230);
+    margin: 0px;
     
 }
