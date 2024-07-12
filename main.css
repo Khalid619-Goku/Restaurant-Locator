@@ -1,27 +1,74 @@
-body{
-    background-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #24252A;
 }
-nav{
-    
-    position: sticky;
-    top: 0;
-    z-index: 1071;
-    box-shadow: 0 1px 20px 0 rgb(137, 93, 62);
+
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #edf0f1;
 }
-.navbar{
-    background-color: rgb(227, 236, 241);
-    border-radius: 0px;
-    display: flex;
-    margin: 1px;
+
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    padding: 5px;
+    opacity: inherit;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+    padding-left: 10px;
+    color:#edf0f1;
+    font-size: 1.2rem;
+    margin-right: auto;
+}
+
+.links li{
+    padding-left: 20px;
+    text-decoration:none;
+    display: inline-block;
+    cursor: pointer;
+    list-style:none; 
+    transition: 0.3s ease-in; 
+    padding-top: 20px;
+}
+
+.links li a{
+    text-decoration: none;
     padding: 10px;
-    height:4em;
-   
-
 }
 
-.item{
-        background-color: azure;
+.search-bar{
+    padding-right: 10px;
+    padding-left: 10px;
+    list-style: none;
 }
+#btn{
+    color: beige;
+    border: #edf0f1;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: blueviolet;
+    transition: 0.3s ease-in;
+}
+
+#btn:hover {
+    background-color:rgb(75, 72, 72);
+    transition: 0.3s ease-in;
+}
+
+
+
+
 .mid h1{
     text-align: center;
     color: #ff0303;
@@ -41,21 +88,7 @@ nav{
  top: 350px;
  left: 580px;
 }
-#item-1 img{
-    height:50px;
-    width:70px;
-}
 
-#item-2{
-        font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-weight : 400;
-        font: red; 
-        
-}
-#item-3{
-    background-color: red;
-    
-}
 .search-container{
     margin: 2px;
 }
