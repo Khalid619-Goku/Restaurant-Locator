@@ -1,0 +1,98 @@
+/* Basic styling for cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 400px; /* Adjust card width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure overflow is hidden to contain images */
+}
+
+.card-image {
+    height: 200px; /* Adjust image height as needed */
+    background-size: cover;
+    background-position: center;
+    gap: 30px;
+}
+
+.card-details {
+    padding: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* Styling for navbar and footer (optional, adjust as needed) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+}
+
+.navbar .nav-item {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Flexbox layout for main content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+ min-height: 100%;
+}
+
+.left-container {
+    flex: 1; /* Take up remaining space */
+    background-color: #333;
+    color: whitesmoke;
+    gap: 40px;
+    margin-right: 20px; /* Add space between containers */
+}
+
+.right-container {
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    gap: 40px;
+    flex: 1; /* Take up remaining space */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    margin-top: auto;
+    background-color: #180101; /* Example background color */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+body{
+    background-color: green;
+}

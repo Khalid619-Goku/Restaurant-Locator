@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="nav-item"><h2>HOME</h2></a>
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="nav-item">Login / Signup</a>
+            <a href="#" class="nav-item">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Container (Filters) -->
+        <div class="left-container">
+            <h2>Filters</h2>
+            <div class="filter-section">
+                <label for="price-range">Price Range</label>
+                <input type="range" id="price-range" min="1500" max="5000" step="100" value="1500" class="slider">
+                <span id="price-value">1500</span>
+            </div>
+            <div class="filter-section">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter location...">
+            </div>
+            <button id="apply-filters">Apply Filters</button>
+        </div>
+
+        <!-- Right Container (Card Gallery) -->
+        <div class="right-container">
+            <h2>Search Results</h2>
+            <div class="card-gallery">
+                <!-- Cards will be dynamically generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Property Search. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Script for interacting with filters and generating cards (dummy data)
+        document.addEventListener('DOMContentLoaded', function() {
+            const priceRange = document.getElementById('price-range');
+            const priceValue = document.getElementById('price-value');
+            const applyFiltersBtn = document.getElementById('apply-filters');
+            const cardGallery = document.querySelector('.card-gallery');
+
+            // Initialize price range value
+            priceValue.textContent = priceRange.value;
+
+            // Update price value display when range input changes
+            priceRange.addEventListener('input', function() {
+                priceValue.textContent = this.value;
+            });
+
+            // Dummy function to generate initial cards (before applying filters)
+            function generateInitialCards() {
+                const dummyData = [
+                    { id: 1, title: 'Khogen Boys pg', price: 'Rs.2200/month', location: 'Near GU', image: 'https://via.placeholder.com/300' },
+                    { id: 2, title: 'Horen girls pg', price: 'RS2600/month', location: 'Aec Road', image: 'https://via.placeholder.com/300' },
+                    { id: 3, title: 'Horkanto Boys Hostel', price: 'Rs.1800/month', location: 'Jalukbari', image: 'https://via.placeholder.com/300' }
+                ];
+
+                dummyData.forEach(property => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    card.innerHTML = `
+                        <div class="card-image" style="background-image: url('${property.image}')"></div>
+                        <div class="card-details">
+                            <h3>${property.title}</h3>
+                            <p><strong>Price:</strong> ${property.price}</p>
+                            <p><strong>Location:</strong> ${property.location}</p>
+                        </div>
+                    `;
+                    cardGallery.appendChild(card);
+                });
+            }
+
+            // Call the function to generate initial cards
+            generateInitialCards();
+
+            // Dummy function to simulate applying filters and generating cards
+            applyFiltersBtn.addEventListener('click', function() {
+                // Clear existing cards (for demonstration)
+                cardGallery.innerHTML = '';
+
+                // Dummy data for cards (replace with actual data fetching and rendering logic)
+                const dummyData = [
+                    { id: 1, title: 'Property 1', price: 'Rs.2000/month', location: 'Adabari', image: 'https://via.placeholder.com/300' },
+                    { id: 2, title: 'Property 2', price: 'Rs2500/month', location: 'Jalukbari', image: 'https://via.placeholder.com/300' },
+                    { id: 3, title: 'Property 3', price: 'Rs.1800/month', location: 'Lankeshwar', image: 'https://via.placeholder.com/300' },
+                    { id: 4, title: 'Property 4', price: 'Rs.3000/month', location: 'Polashbari', image: 'https://via.placeholder.com/300' }
+                ];
+
+                // Generate card elements based on dummy data
+                dummyData.forEach(property => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    card.innerHTML = `
+                        <div class="card-image" style="background-image: url('${property.image}')"></div>
+                        <div class="card-details">
+                            <h3>${property.title}</h3>
+                            <p><strong>Price:</strong> ${property.price}</p>
+                            <p><strong>Location:</strong> ${property.location}</p>
+                        </div>
+                    `;
+                    cardGallery.appendChild(card);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
